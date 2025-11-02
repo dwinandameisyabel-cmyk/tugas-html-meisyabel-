@@ -1,35 +1,105 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <title>Profil Penulis - Tere Liye</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulir Pendaftaran Komunitas Teknologi</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 30px;
+    }
+    form {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      width: 400px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    fieldset {
+      border: 2px solid #007bff;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+    legend {
+      font-weight: bold;
+      color: #007bff;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    input, select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .buttons {
+      text-align: center;
+    }
+    input[type="submit"], input[type="reset"] {
+      width: 45%;
+      margin: 10px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      padding: 10px;
+    }
+    input[type="reset"] {
+      background: #dc3545;
+    }
+    input[type="submit"]:hover {
+      background: #0056b3;
+    }
+    input[type="reset"]:hover {
+      background: #a71d2a;
+    }
+  </style>
 </head>
 <body>
-    <h1>Profil Penulis Favorit: Tere Liye</h1>
-    <p><strong>Nama Lengkap:</strong> Darwis (nama pena: Tere Liye)</p>
-    <p><strong>Tempat, Tanggal Lahir:</strong> Lahat, 21 Mei 1979</p>
-    <p><strong>Profesi:</strong> Penulis novel dan motivator</p>
-    
-    <h2>Karya Terkenal</h2>
-    <ol>
-        <li>Hafalan Shalat Delisa</li>
-        <li>Rindu</li>
-        <li>Negeri Para Bedebah</li>
-        <li>Daun yang Jatuh Tak Pernah Membenci Angin</li>
-    </ol>
-
-    <h2>Tentang Penulis</h2>
-    <p>
-        Tere Liye dikenal karena gaya penulisannya yang sederhana namun sarat makna. 
-        Ia banyak menulis novel bertema kehidupan, keluarga, dan nilai moral. 
-        Buku-bukunya sering menjadi inspirasi bagi pembaca di seluruh Indonesia.
-    </p>
-
-    <p><strong>Dibuat oleh:</strong> Meisyabel (A1B025134)</p>
-    <p><strong>Kakak Pembimbing:</strong> Reksi Hendra Pratama (G1A022032)</p>
-    <p><strong>Prodi:</strong> Pendidikan Bahasa Inggris</p>
-
-    <!-- Tugas HTML Profil Penulis - Meisyabel -->
+  <h2 style="text-align:center;">Formulir Pendaftaran Komunitas Teknologi</h2>
+  <form action="submit.html" method="post" enctype="multipart/form-data">
+    <fieldset>
+      <legend>Data Pribadi</legend>
+      <label for="nama">Nama Lengkap:</label>
+      <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap" required>
+      <label for="email">Alamat Email:</label>
+      <input type="email" id="email" name="email" placeholder="contoh@email.com" required autocomplete="on">
+      <label for="password">Kata Sandi:</label>
+      <input type="password" id="password" name="password" placeholder="Minimal 6 karakter" required pattern=".{6,}">
+      <label for="usia">Usia:</label>
+      <input type="number" id="usia" name="usia" min="10" max="100" required>
+      <label for="tgl">Tanggal Lahir:</label>
+      <input type="date" id="tgl" name="tgl" required>
+      <label>Jenis Kelamin:</label>
+      <input type="radio" name="gender" value="Laki-laki" required> Laki-laki
+      <input type="radio" name="gender" value="Perempuan"> Perempuan
+    </fieldset>
+    <fieldset>
+      <legend>Informasi Tambahan</legend>
+      <label>Minat:</label>
+      <input type="checkbox" name="minat" value="AI"> AI
+      <input type="checkbox" name="minat" value="Web"> Web
+      <input type="checkbox" name="minat" value="IoT"> IoT
+      <input type="checkbox" name="minat" value="Game"> Game
+      <label for="telp">Nomor Telepon:</label>
+      <input type="tel" id="telp" name="telp" placeholder="081234567890" required pattern="[0-9]{10,13}">
+      <label for="url">Link Portofolio:</label>
+      <input type="url" id="url" name="url" placeholder="https://contoh.com">
+      <label for="foto">Upload Foto Profil:</label>
+      <input type="file" id="foto" name="foto" accept="image/*">
+    </fieldset>
+    <div class="buttons">
+      <input type="reset" value="Reset">
+      <input type="submit" value="Submit">
+    </div>
+  </form>
 </body>
 </html>
