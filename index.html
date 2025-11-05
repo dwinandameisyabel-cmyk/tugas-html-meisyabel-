@@ -1,105 +1,132 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Formulir Pendaftaran Komunitas Teknologi</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f2f2f2;
-      margin: 30px;
-    }
-    form {
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      width: 400px;
-      margin: auto;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    fieldset {
-      border: 2px solid #007bff;
-      border-radius: 8px;
-      margin-bottom: 15px;
-    }
-    legend {
-      font-weight: bold;
-      color: #007bff;
-    }
-    label {
-      display: block;
-      margin-top: 10px;
-      font-weight: bold;
-    }
-    input, select {
-      width: 100%;
-      padding: 8px;
-      margin-top: 5px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-    .buttons {
-      text-align: center;
-    }
-    input[type="submit"], input[type="reset"] {
-      width: 45%;
-      margin: 10px;
-      background: #007bff;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      padding: 10px;
-    }
-    input[type="reset"] {
-      background: #dc3545;
-    }
-    input[type="submit"]:hover {
-      background: #0056b3;
-    }
-    input[type="reset"]:hover {
-      background: #a71d2a;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Mahasiswa Berprestasi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            margin: 40px;
+        }
+        h1 {
+            text-align: center;
+            color: #005f99;
+        }
+        table {
+            width: 90%;
+            margin: 0 auto;
+            border-collapse: collapse;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        caption {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        th, td {
+            border: 1px solid #999;
+            padding: 10px;
+            text-align: center;
+        }
+        thead th {
+            background-color: #007acc;
+            color: white;
+        }
+        tbody tr:nth-child(even) {
+            background-color: #e8f4ff;
+        }
+        tbody tr:nth-child(odd) {
+            background-color: #ffffff;
+        }
+        tbody tr:hover {
+            background-color: #d1e7ff;
+            transition: 0.3s;
+        }
+        tfoot {
+            background-color: #007acc;
+            color: white;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-  <h2 style="text-align:center;">Formulir Pendaftaran Komunitas Teknologi</h2>
-  <form action="submit.html" method="post" enctype="multipart/form-data">
-    <fieldset>
-      <legend>Data Pribadi</legend>
-      <label for="nama">Nama Lengkap:</label>
-      <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap" required>
-      <label for="email">Alamat Email:</label>
-      <input type="email" id="email" name="email" placeholder="contoh@email.com" required autocomplete="on">
-      <label for="password">Kata Sandi:</label>
-      <input type="password" id="password" name="password" placeholder="Minimal 6 karakter" required pattern=".{6,}">
-      <label for="usia">Usia:</label>
-      <input type="number" id="usia" name="usia" min="10" max="100" required>
-      <label for="tgl">Tanggal Lahir:</label>
-      <input type="date" id="tgl" name="tgl" required>
-      <label>Jenis Kelamin:</label>
-      <input type="radio" name="gender" value="Laki-laki" required> Laki-laki
-      <input type="radio" name="gender" value="Perempuan"> Perempuan
-    </fieldset>
-    <fieldset>
-      <legend>Informasi Tambahan</legend>
-      <label>Minat:</label>
-      <input type="checkbox" name="minat" value="AI"> AI
-      <input type="checkbox" name="minat" value="Web"> Web
-      <input type="checkbox" name="minat" value="IoT"> IoT
-      <input type="checkbox" name="minat" value="Game"> Game
-      <label for="telp">Nomor Telepon:</label>
-      <input type="tel" id="telp" name="telp" placeholder="081234567890" required pattern="[0-9]{10,13}">
-      <label for="url">Link Portofolio:</label>
-      <input type="url" id="url" name="url" placeholder="https://contoh.com">
-      <label for="foto">Upload Foto Profil:</label>
-      <input type="file" id="foto" name="foto" accept="image/*">
-    </fieldset>
-    <div class="buttons">
-      <input type="reset" value="Reset">
-      <input type="submit" value="Submit">
-    </div>
-  </form>
+
+    <h1>Daftar Mahasiswa Berprestasi Universitas Nusantara 2025</h1>
+
+    <table>
+        <caption>Data Mahasiswa Berprestasi</caption>
+        <thead>
+            <tr>
+                <th rowspan="2" scope="col">No</th>
+                <th colspan="2" scope="col">Nama Mahasiswa</th>
+                <th rowspan="2" scope="col">Program Studi</th>
+                <th rowspan="2" scope="col">IPK</th>
+                <th rowspan="2" scope="col">Prestasi</th>
+                <th rowspan="2" scope="col">Tahun</th>
+            </tr>
+            <tr>
+                <th scope="col">Nama Depan</th>
+                <th scope="col">Nama Belakang</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Budi</td>
+                <td>Santoso</td>
+                <td>Informatika</td>
+                <td>3.95</td>
+                <td>Juara 1 Hackathon</td>
+                <td>2025</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Sari</td>
+                <td>Putri</td>
+                <td>Sistem Informasi</td>
+                <td>3.88</td>
+                <td>Lomba UI/UX Nasional</td>
+                <td>2025</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Dimas</td>
+                <td>Pratama</td>
+                <td>Informatika</td>
+                <td>3.95</td>
+                <td>Asisten Dosen Terbaik</td>
+                <td>2024</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Anita</td>
+                <td>Arunyta</td>
+                <td>Teknik Komputer</td>
+                <td>3.67</td>
+                <td>Lomba Robotik</td>
+                <td>2024</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Rafi</td>
+                <td>Ramadhan</td>
+                <td>Informatika</td>
+                <td>3.50</td>
+                <td>Olimpiade Sains</td>
+                <td>2025</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td colspan="7">Total Mahasiswa: 5</td>
+            </tr>
+        </tfoot>
+    </table>
+
 </body>
 </html>
